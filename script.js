@@ -7,7 +7,7 @@ const map = L.map('map').setView([-22.857350, -43.229753], 15);
 		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	}).addTo(map);
 
-    const markers = {'Campo': './bola.png', 'Quadra': './bola.png'};
+    const markers = {'Campo': './bola.png', 'Quadra': './quadra.svg'};
 
     campos.map((campo) => {
 
