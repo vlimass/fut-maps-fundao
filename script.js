@@ -7,23 +7,22 @@ const map = L.map('map').setView([-22.857350, -43.229753], 15);
 		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	}).addTo(map);
 
-    const markerCampo = L.icon({
-        iconUrl: 'my-icon.png',
-        iconSize: [38, 95],
-        iconAnchor: [22, 94],
-        popupAnchor: [-3, -76],
-        shadowUrl: 'my-icon-shadow.png',
-        shadowSize: [68, 95],
-        shadowAnchor: [22, 94]
-    });
+    const markers = {'Campo': './bola.png', 'Quadra': './bola.png'};
 
     campos.map((campo) => {
-        L.marker(campo.coordinates)
+
+        const marker = L.icon({
+            iconUrl: markers[campo.type],
+            iconSize: [30, 30],
+        });
+
+        L.marker(campo.coordinates,{icon:marker})
         .addTo(map)
         .bindPopup(`
             <b>${campo.name}</b>
             <br>
-            <span>${campo.description}</span>`)
+            <span>${campo.description}</span>
+            <span>Tipo: ${campo.type}</span>`)
         .openPopup();
     })
 
