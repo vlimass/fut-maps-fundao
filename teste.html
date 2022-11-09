@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base target="_top">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Quick Start - Leaflet</title>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+
+	<style>
+		html, body {
+			height: 100vh;
+			margin: 0;
+		}
+		.leaflet-container {
+			height: 100vh;
+			width: 100vw;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	</style>
+
+	
+</head>
+<body>
+
+
+
+<div id="map" style="width: 100vw; height: 100vh;"></div>
+<script>
+
+	const map = L.map('map').setView([-22.857350, -43.229753], 13);
+
+	const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(map);
+
+    const marker = L.icon({
+        iconUrl: 'my-icon.png',
+        iconSize: [38, 95],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -76],
+        shadowUrl: 'my-icon-shadow.png',
+        shadowSize: [68, 95],
+        shadowAnchor: [22, 94]
+    });
+
+	const cobalGrande = L.marker([-22.86750880445259, -43.21829123227059])
+    .addTo(map)
+    .bindPopup('<b>COBAL</b><br />Um campin pra vc sair e já sair pro bar.')
+    .openPopup();
+
+    const cobalPequeno = L.marker([-22.867392357401517, -43.21910809165156])
+    .addTo(map)
+    .bindPopup('<b>COBAL PEQUENO</b><br />Um campin pra vc sair e já sair pro bar.')
+    .openPopup();
+
+    // const coppe = L.marker([-22.863866, -43.229407])
+    // .addTo(map)
+    // .bindPopup('<b>COBAL PEQUENO</b><br />Um campin pra vc sair e já sair pro bar.')
+    // .openPopup();
+
+    // const coppe = L.marker([-22.863866, -43.229407])
+    // .addTo(map)
+    // .bindPopup('<b>COBAL PEQUENO</b><br />Um campin pra vc sair e já sair pro bar.')
+    // .openPopup();
+
+
+	// const circle = L.circle([51.508, -0.11], {
+	// 	color: 'red',
+	// 	fillColor: '#f03',
+	// 	fillOpacity: 0.5,
+	// 	radius: 500
+	// }).addTo(map).bindPopup('I am a circle.');
+
+	// const polygon = L.polygon([
+	// 	[51.509, -0.08],
+	// 	[51.503, -0.06],
+	// 	[51.51, -0.047]
+	// ]).addTo(map).bindPopup('I am a polygon.');
+
+
+	// const popup = L.popup()
+	// 	.setLatLng([51.513, -0.09])
+	// 	.setContent('I am a standalone popup.')
+	// 	.openOn(map);
+
+	function onMapClick(e) {
+		popup
+			.setLatLng(e.latlng)
+			.setContent(`You clicked the map at ${e.latlng.toString()}`)
+			.openOn(map);
+	}
+
+	map.on('click', onMapClick);
+
+</script>
+
+</body>
+</html>
