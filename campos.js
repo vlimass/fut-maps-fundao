@@ -81,7 +81,7 @@ const campos = [
         name: 'Quadras Poliesportivas 2',
         coordinates: [-22.842904946247383, -43.23206557241575],
         description: '',
-        type: 'Quadras'
+        type: 'Quadra'
     },
     {
         name: 'Alojamento Estudantil',
