@@ -5,19 +5,23 @@ const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-campos.map((campo) => {
+fields.map((field) => {
     const marker = L.icon({
-        iconUrl: `./assets/${campo.type.toLowerCase()}-${campo.availability.toLowerCase()}.svg`,
+        iconUrl: `./assets/${field.type.toLowerCase()}-${field.availability.toLowerCase()}.svg`,
         iconSize: [30, 30],
     });
 
-    L.marker(campo.coordinates,{icon:marker})
+    L.marker(field.coordinates,{icon:marker})
     .addTo(map)
-    .bindPopup(`
-        <b>${campo.name}</b>
-        <br>
-        <span>${campo.description}</span>
-        <span>Tipo: ${campo.type}</span>`)
+    .bindPopup(
+        `
+        <b>${field.name}</b><br>
+        <span>Tipo: ${field.type}</span><br>
+        <span>Disponibilidade: ${field.availability}</span><br>
+        <span>Elenco: ${field.numberOfPlayers} jogadores</span><br>
+        <span>${field.description}</span>
+        `
+    )
     .openPopup();
 })
 
@@ -29,3 +33,8 @@ function onMapClick(e) {
 }
 
 map.on('click', onMapClick);
+
+// Modal de Legenda
+function handleOpenCaptions() {
+
+}
