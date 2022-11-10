@@ -5,3 +5,78 @@
 	text-decoration: none;
 	box-sizing: border-box;
 }
+
+body {
+	position: absolute;
+}
+
+.logo {	
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 1%;
+	height: 15%;
+	z-index: 1;
+}
+
+main {
+	position: fixed;
+}
+
+#map {
+	width: 100vw; 
+	height: 100vh;
+	z-index: -1;
+}
+
+.captions {
+	position: fixed;
+	bottom: 2%;
+	left: 2%;
+
+	padding: 1rem 2rem; 
+	border-radius: 10px;
+	background-color: #fff;
+	font-family: "Roboto", sans-serif;
+	box-shadow: -2px 2px 15px 5px rgba(0,0,0,0.37);
+}
+
+.captions .captions-title {
+	width: 100%;
+	text-align: center;
+	font-size: 1.5rem;
+}	
+
+.captions .content {
+	margin-top: 1.5rem;
+
+	display: flex;
+	/* flex-direction: column; */
+	gap: 3rem;
+}
+
+.captions .content p {
+	font-size: 1.25rem;
+}
+
+.captions ul {
+	margin-top: 1rem;
+	list-style: none;
+
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.captions ul li {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	height: 2rem;
+}
+
+.captions ul li img{
+	height: 2rem;
+}
+
+

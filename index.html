@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
 	<base target="_top">
 	<meta charset="utf-8">
@@ -7,8 +7,16 @@
 	
 	<title>Fut Mapa</title>
 
-	<link rel="stylesheet" href="./styles/style.css">
+	<!-- Favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.svg" />
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="./styles/style.css">
+
+	<!-- Fontes -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 	<!-- Importação da biblioteca Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/>
@@ -16,7 +24,53 @@
 	
 </head>
 <body>
-	<div id="map" style="width: 100vw; height: 100vh;"></div>
+	<header>
+		<img class="logo" src="./assets/logo-fut-maps.svg" alt="Logo Fut Maps Fundão">
+	</header>
+
+	<main>
+		<div id="map"></div>
+
+		<div class="captions">
+			<div class="captions-title">
+				<strong>Legenda</strong>
+			</div>
+			<div class="content">
+				<div>
+					<p>Tipo:</p>
+					<ul>
+						<li class="campo-legenda">
+							<img src="./assets/campo-legenda.svg" alt="Bola de futebol de campo para legenda">
+							Campo
+						</li>
+						<li class="quadra-legenda">
+							<img src="./assets/quadra-legenda.svg" alt="Bola de futsal para legenda">
+							Quadra
+						</li>
+					</ul>
+				</div>
+
+				<div>
+					<p>Disponibilidade:</p>
+					<ul>
+						<li class="campo-legenda">
+							<img src="./assets/green.svg" alt="Indicação de campo livre">
+							Livre
+						</li>
+						<li class="quadra-legenda">
+							<img src="./assets/yellow.svg" alt="Indicação de campo para agendamento">
+							Agendamento
+						</li>
+						<li class="quadra-legenda">
+							<img src="./assets/red.svg" alt="Indicação de campo pago">
+							Pago
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</main>
+
 	<script src="./scripts/campos.js" defer></script>
 	<script src="./scripts/index.js" defer></script>
 </body>
