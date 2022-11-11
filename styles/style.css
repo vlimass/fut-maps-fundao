@@ -44,13 +44,14 @@ main {
 .open img:hover {
 	cursor: pointer;	
 	opacity: .8;
-	transition: opacity ease .15s .15s;
+	transition: .2s all;
 }
 
 .captions {
 	position: fixed;
-	left: -30%;
-	bottom: -30%;
+	left: -30vw;
+	bottom: -30vh;
+	opacity: .2;
 
 	padding: 1rem 2rem; 
 	border-radius: 10px;
@@ -58,12 +59,12 @@ main {
 	font-family: "Roboto", sans-serif;
 	box-shadow: -2px 2px 15px 5px rgba(0,0,0,0.37);
 
-	transition: left ease .15s .15s, bottom ease .15s .15s, opacity ease .15s .15s, transform .15s;
+	transition: left ease .15s .15s, bottom ease .15s .15s, opacity ease .2s .2s, transform .15s;
 }
 
 .captions.show {
-	left: 2%;
-	bottom: 2%;
+	left: 2vw;
+	bottom: 2vh;
 	opacity: 1;
 }
 
