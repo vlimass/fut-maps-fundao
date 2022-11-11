@@ -127,9 +127,8 @@ main {
 
 @media screen and (max-width: 425px) {
 	.captions {
-		left: 1vw;
-		right: 1vw;
-		bottom: 1vh;
+		left: 2vw;
+		right: 2vw;
 		padding: 0.75rem;
 	}
 
