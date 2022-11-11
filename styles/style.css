@@ -29,23 +29,80 @@ main {
 	z-index: -1;
 }
 
-.captions {
+.open {
 	position: fixed;
 	bottom: 2%;
 	left: 2%;
+
+	background: none;
+}
+
+.open img {
+	height: 3rem;
+}
+
+.open img:hover {
+	cursor: pointer;	
+	opacity: .8;
+	transition: opacity ease .15s .15s;
+}
+
+.captions {
+	position: absolute;
+	left: -30%;
+	bottom: -30%;
 
 	padding: 1rem 2rem; 
 	border-radius: 10px;
 	background-color: #fff;
 	font-family: "Roboto", sans-serif;
 	box-shadow: -2px 2px 15px 5px rgba(0,0,0,0.37);
+
+	transition: left ease .15s .15s, bottom ease .15s .15s, opacity ease .15s .15s, transform .15s;
+}
+
+.captions.show {
+	left: 2%;
+	bottom: 2%;
+	opacity: 1;
+}
+
+@keyframes open {
+	0%   {left: 0%; bottom: 0%;}
+	12.5% {left: .25%; bottom: .25%;}
+	25%  {left: .5%; bottom: .5%;}
+	37.5%  {left: .75%; bottom: .75%;}
+	50%  {left: 1%; bottom: 1%;}
+	62.5%  {left: 1.25%; bottom: 1.25%;}
+	75%  {left: 1.5%; bottom: 1.5%;}
+	87.5%  {left: 1.75%; bottom: 1.75%;}
+	100% {left: 2%; bottom: 2%;}
 }
 
 .captions .captions-title {
 	width: 100%;
 	text-align: center;
 	font-size: 1.5rem;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }	
+
+.captions .captions-title button {
+	background: none;
+	border: none;
+}
+
+.captions .captions-title button:hover {
+	cursor: pointer;
+	opacity: .6;
+	transition: .2s all;
+}
+
+.captions .captions-title button img {
+	height: 1rem;
+}
 
 .captions .content {
 	margin-top: 1.25rem;

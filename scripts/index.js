@@ -34,7 +34,17 @@ function onMapClick(e) {
 
 map.on('click', onMapClick);
 
-// Modal de Legenda
-function handleOpenCaptions() {
+// Pop up de Legenda
+const modal = document.querySelector(".captions");
+const openBtn = document.querySelector(".open");
+// const closeBtn = document.querySelector(".close");
 
+function openCaptions() {
+    modal.classList.add('show');
+    open.classList.remove('show');
+}
+
+function closeCaptions() {  
+    modal.classList.remove('show');
+    open.classList.add('show');
 }

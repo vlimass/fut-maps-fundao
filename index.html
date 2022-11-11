@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title>Fut Mapa</title>
+	<title>Fut Maps Fundão</title>
 
 	<!-- Favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.svg" />
@@ -31,9 +31,17 @@
 	<main>
 		<div id="map"></div>
 
+		<button class="open" onclick="openCaptions()">
+			<img src="./assets/info.svg" alt="botão de legenda">
+		</button>
+
 		<div class="captions">
 			<div class="captions-title">
+				<div></div>
 				<strong>Legenda</strong>
+				<button class="close" onclick="closeCaptions()">
+					<img src="./assets/close.svg" alt="ícone de fechar">
+				</button>
 			</div>
 			<div class="content">
 				<div>
@@ -58,7 +66,7 @@
 							Livre
 						</li>
 						<li class="quadra-legenda">
-							<img src="./assets/yellow.svg" alt="Indicação de campo para agendamento">
+							<img src="./assets/orange.svg" alt="Indicação de campo para agendamento">
 							Agendamento
 						</li>
 						<li class="quadra-legenda">
