@@ -48,7 +48,7 @@ main {
 }
 
 .captions {
-	position: absolute;
+	position: fixed;
 	left: -30%;
 	bottom: -30%;
 
@@ -65,18 +65,6 @@ main {
 	left: 2%;
 	bottom: 2%;
 	opacity: 1;
-}
-
-@keyframes open {
-	0%   {left: 0%; bottom: 0%;}
-	12.5% {left: .25%; bottom: .25%;}
-	25%  {left: .5%; bottom: .5%;}
-	37.5%  {left: .75%; bottom: .75%;}
-	50%  {left: 1%; bottom: 1%;}
-	62.5%  {left: 1.25%; bottom: 1.25%;}
-	75%  {left: 1.5%; bottom: 1.5%;}
-	87.5%  {left: 1.75%; bottom: 1.75%;}
-	100% {left: 2%; bottom: 2%;}
 }
 
 .captions .captions-title {
