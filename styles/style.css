@@ -125,13 +125,16 @@ main {
 	height: 1.5rem;
 }
 
+
 /* Media Queries */
 
 @media screen and (max-width: 425px) {
 	.open {
 		margin-left: 3vw;
-		/* margin-bottom: -1vh;
-		bottom: 2vh; */
+	}
+
+	.captions {
+		transition: .15s all;
 	}
 
 	.captions.show {
