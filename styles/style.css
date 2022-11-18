@@ -32,7 +32,7 @@ main {
 .open {
 	position: fixed;
 	bottom: 2.5vh;
-	left: 2.5vw;
+	left: 2vw;
 
 	background: none;
 }
@@ -63,7 +63,7 @@ main {
 }
 
 .captions.show {
-	left: 2vw;
+	left: 1.5vw;
 	bottom: 2.5vh;
 	opacity: 1;
 }
@@ -125,17 +125,20 @@ main {
 	height: 1.5rem;
 }
 
+/* Media Queries */
+
 @media screen and (max-width: 425px) {
 	.open {
-		margin-left: 2.5vw;
+		margin-left: 3vw;
 		/* margin-bottom: -1vh;
 		bottom: 2vh; */
 	}
 
-	.captions {
-		right: 5vw;
-		margin-left: 2.5vw;
+	.captions.show {
+		right: 3vw;
+		margin-left: 2vw;
 		padding: 0.75rem;
+		bottom: 1.5vh;
 	}
 
 	.captions .captions-title {
