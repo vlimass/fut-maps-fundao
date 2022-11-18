@@ -37,7 +37,6 @@ map.on('click', onMapClick);
 // Pop up de Legenda
 const modal = document.querySelector(".captions");
 const openBtn = document.querySelector(".open");
-// const closeBtn = document.querySelector(".close");
 
 function openCaptions() {
     modal.classList.add('show');

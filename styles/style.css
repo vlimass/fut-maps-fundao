@@ -31,14 +31,14 @@ main {
 
 .open {
 	position: fixed;
-	bottom: 2vh;
-	left: 2vw;
+	bottom: 2.5vh;
+	left: 2.5vw;
 
 	background: none;
 }
 
 .open img {
-	height: 3rem;
+	height: 3.5rem;
 }
 
 .open img:hover {
@@ -49,8 +49,8 @@ main {
 
 .captions {
 	position: fixed;
-	left: -30vw;
-	bottom: -30vh;
+	left: -42vw;
+	bottom: -42vh;
 	opacity: .2;
 
 	padding: 1rem 2rem; 
@@ -64,7 +64,7 @@ main {
 
 .captions.show {
 	left: 2vw;
-	bottom: 2vh;
+	bottom: 2.5vh;
 	opacity: 1;
 }
 
@@ -97,7 +97,7 @@ main {
 	margin-top: 1.25rem;
 
 	display: flex;
-	gap: 2rem;
+	gap: 4rem;
 }
 
 .captions .content p {
@@ -126,9 +126,15 @@ main {
 }
 
 @media screen and (max-width: 425px) {
+	.open {
+		margin-left: 2.5vw;
+		/* margin-bottom: -1vh;
+		bottom: 2vh; */
+	}
+
 	.captions {
-		left: 2vw;
-		right: 2vw;
+		right: 5vw;
+		margin-left: 2.5vw;
 		padding: 0.75rem;
 	}
 
@@ -138,8 +144,9 @@ main {
 
 	.captions .content {
 		margin-top: 0.75rem;
-	
+		
 		display: flex;
+		gap: 2rem;
 		justify-content: space-around;
 	}
 
