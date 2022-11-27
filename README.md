@@ -41,6 +41,8 @@ As informações de campos e quadras presentes no fundão podem ser ainda mais e
 
 ### 📸 Preview do projeto
 
+<br>
+
 <img src="./images/capa.png" alt="Capa Mapeando Campos de Futebol">
 <img src="./images/contra-capa.png" alt="Imagens do projeto">
 
